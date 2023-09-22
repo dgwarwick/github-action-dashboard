@@ -75,8 +75,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           # tags: ${{ steps.docker_meta.outputs.tags }}
-          tags: latest
-          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/github-action-dashboard:latest
+          tags: ${{ steps.docker_meta.outputs.tags }}
+          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/github-action-dashboard:edge
           cache-to: type=inline
           
       - name: Image digest
