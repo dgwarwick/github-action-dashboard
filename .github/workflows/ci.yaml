@@ -42,7 +42,7 @@ jobs:
           tag-sha: true
           tag-edge: true
           tag-latest: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_CR_PAT }}
           
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
