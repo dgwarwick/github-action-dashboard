@@ -34,15 +34,15 @@ jobs:
         run: DOCKER_BUILD=true npm run build
         working-directory: ./client
         
-      # - name: Docker meta
-      #   id: docker_meta
-      #   uses: docker/meta-action@v1
-      #   with:
-      #     images: ghcr.io/${{ github.repository_owner }}/github-action-dashboard
-      #     tag-sha: true
-      #     tag-edge: true
-      #     tag-latest: true
-      #     github-token: ${{ secrets.GH_CR_PAT }}
+      - name: Docker meta
+        id: docker_meta
+        uses: docker/meta-action@v1
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/github-action-dashboard
+          tag-sha: true
+          tag-edge: true
+          tag-latest: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
