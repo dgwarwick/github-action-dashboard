@@ -36,7 +36,7 @@ jobs:
         
       - name: Docker meta
         id: docker_meta
-        uses: docker/meta-action@v1
+        uses: docker/metadata-action@v1
         with:
           images: ghcr.io/${{ github.repository_owner }}/github-action-dashboard
           tag-sha: true
